@@ -20,7 +20,7 @@ i)  Reading dhs files in R from STATA (one can do with with SPSS and other forma
 
 ii) Creating new variables , tables, cross-tables, surveydesign and regression. I shall mainly use `tidyverse` package but you can use base R if you like.
 
-## Install R and RStudio (Urdu/Hindi langues for this heading only)# Getting started
+## Install R and RStudio (Urdu/Hindi langues for this heading only)
 
 Once you have installed R, Rtools (in some cases using Windows) and RStudio{{< video https://youtu.be/ZNBZevfYgo0 >}}, you need to install a package. A package is like fixing a bulb and you have to do it only once. Once you have installed relevant package(s), next is to recall it using `library()` which is like switching on a button of a bulb. There is base-R commands but very easy and useful is to learn `tidyverse` which consists of many useful packages, we will talk later on.
 
@@ -165,6 +165,7 @@ table1
 ```
 
 ```{r}
+
 #If you want sampling error (SE) and confidence intervals (CI), you can use svyby with by=1 for total
 svyby(~modfp,by=1,  design=mysurvey, FUN=svymean, vartype=c("se", "ci"))
 
@@ -173,8 +174,6 @@ svyby(~modfp,by=1,  design=mysurvey, FUN=svymean, vartype=c("se", "ci"))
 #for instance education level, v106, has four categories. You can estimate the SE and cI for each category.
 svyby(~as.factor(v106),by=1,  design=mysurvey, FUN=svymean, vartype=c("se", "ci"))
 
-#to check the labels for v106
-print_labels(v106)
 
 # Crosstabulation of modfp (modern FP use) and place of education (v106)
 table2 <- svyby(~modfp, by = ~v106, design=mysurvey, FUN=svymean, vartype=c("se", "ci"))
