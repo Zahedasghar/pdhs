@@ -1,18 +1,19 @@
 ---
-title: "Demographic Health Survey Data in R"
-title-block-banner-color: "#FFDDFF"
+title: "[Demographic Health Survey Data in R]{.flow}"
 title-block-banner: true
 
 subtitle: "Pakistan Demographic Health Survey Data"
-author: "[Zahid Asghar, Professor, School of Economics, QAU](https:/zahedasghar.netlify.app)"
 format: 
   html: 
+    theme: [default, custom.css, styles.scss]
     toc: true
 execute: 
   freeze: true
 ---
 
-## Outline
+Prof.Dr. Zahid Asghar, School of Economics, QAU![](images/zahid.jpg){.r-stretch}
+
+## Purpose
 
 Main purpose of this post is to explain how to download and read `DHS` data in R, how to create variables, make tables and cross-tables and run a simple logit regression. I am using in this post is `IR` which is the individual (women's) recode file. For more details about files you can visit [dhs](dhsprogram.com). USAID main sponsoring agency of DHS data has recently started using open community software for `DHS` data. I am using it for Pakistani data 2017-18. Main outline of this post is as follows:
 
